@@ -1,0 +1,12 @@
+# python cache
+*.pyc
+
+# android studio cfg
+*.iml
+.idea
+kotlin/lib
+kotlin/out
+kotlin/link.jar
+
+# swift
+swift/test_link
