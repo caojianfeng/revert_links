@@ -13,3 +13,7 @@ kotlin/link.jar
 
 # swift
 swift/test_link
+
+# vscode
+.vscode/*
+!.vscode/settings.json
