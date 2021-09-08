@@ -14,6 +14,23 @@ revert links:(T)->(L7)->(L6)->(L5)->(L4)->(L3)->(L2)->(L1)->(L0)->(H)
 ```bash
 java/run.sh
 ```
+### js
+
+执行：
+```bash
+node js/link.js
+```
+或者
+```bash
+js/link.js
+```
+
+⚠️注意 1：安装完node才能执行
+
+⚠️注意 2：在你的js里面添加这个文件头后，你才能直接执行这个js文件
+```
+#!/usr/bin/env node
+```
 
 ### dart
 
@@ -26,7 +43,12 @@ dart dart/link.dart
 dart/link.dart
 ```
 
-需要确保你已经安装好dart环境，你可以运行 dart --version 检验一下。
+⚠️注意 1：需要确保你已经安装好dart环境，你可以运行 dart --version 检验一下。
+
+⚠️注意 2：在你的js里面添加这个文件头后，你才能直接执行这个js文件
+```
+#!/usr/bin/env dart
+```
 
 你也可以先编译再运行
 ```bash
@@ -118,14 +140,31 @@ swift/run.sh
 ```bash
 swift swift/link.swift 
 ```
+⚠️注意 1：需要确保你已经安装好dart环境，你可以运行 dart --version 检验一下。
 
+⚠️注意 2：在你的js里面添加这个文件头后，你才能直接执行这个js文件
+
+在 link.swift 第一行插入
+```
+#!/usr/bin/env swift
+```
+之后你就可以直接这样调用了
+```bash
+swift/link.swift 
+```
 
 ## 执行方式
 
 语言 | 解释执行 | 编译执行
 ----|----|----
 java| ❌ |✅ 
+js| ✅ |❌
 dart |✅| ✅
 kotlin| ❌ |✅ 
 python|✅| ❌ 
 swift|✅| ✅
+
+## 脚本执行的时候自动匹配执行者
+
+在你的文件中
+#!/usr/bin/env node
