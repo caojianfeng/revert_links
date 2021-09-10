@@ -15,7 +15,7 @@ class Links(count: Int){
     init{
         var current: Link? = header
         var w = "${count}".length
-        for(i in 0..count){
+        for(i in 0 until count){
             current!!.next = Link(String.format("L%0${w}d",i), null)
             current = current.next
         }
