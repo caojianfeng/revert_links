@@ -58,9 +58,13 @@ dart compile exe link.dart -o test_link
 
 ### kotlin
 
-执行：
+执行.kt：
 ```bash
 kotlin/run.sh
+```
+或者.kts:
+```bash
+kotlin/link.kts
 ```
 
 
@@ -118,6 +122,22 @@ class Links{
 // ...
 ```
 
+另外，不同于kt,kts 执行的时候不会主动调用main函数，需要在kts文件内手动调用main函数。
+```kotlin
+#!/usr/bin/env kotlin
+// ...
+class Links(count: Int){
+    fun revert(){
+    // ...
+    }
+}
+
+fun main(){
+  // ...
+}
+
+main()
+```
 ### python
 
 
